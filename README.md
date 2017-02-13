@@ -9,6 +9,15 @@ This project is an IDE for the Go language based on amix's most excellent [Ultim
 * [Colour-Sampler-Pack](https://github.com/vim-scripts/Colour-Sampler-Pack): Top 100(ish) Vim colorschemes
 * [ScrollColors](https://github.com/vim-scripts/ScrollColors): Colorsheme Scroller, Chooser, and Browser
 
+# Sample Screen Shot
+The following is a sample screen shot showing:
+
+* Keyword auto-completion feature for some Go code in the center window
+* Directory tree listing on the left
+* Tags window on the right (similar to a table of contents)
+
+![Neocomplete Screen Shot](neocomplete_screen.png "Neocomplete Auto Completion for Go")
+
 # Requirements
 
 ## Vim with Lua Support
@@ -60,7 +69,7 @@ The following function key mappings were added for convenience. These mappings c
 
     <F2>      Directory tree pane (open/close)
     <F3>      Line numbering (toggle)
-    <F4>      Go definition for an function, struct, etc.
+    <F4>      Go definition for a function, struct, etc.
     <F5>      Go callers for a function
     <F6>      Go callstack(s) for a function
     <F7>      Show this function key mapping info
@@ -162,10 +171,6 @@ The following Go-specific snippets are included. These snippets are only in effe
             var           var x Type [= ...]
             vars          var ( ... )
             eq            equals: test two identifiers with DeepEqual
-
-# Neocomplete Plugin
-The [Neocomplete plugin](https://github.com/Shougo/neocomplete.vim) provides a keyword completion framework that works well with Go source code. Here is an sample screen shot showing auto completion for a Go file:
-![Neocomplete Screen Shot](neocomplete_screen.png "Neocomplete Auto Completion for Go")
 
 # Navigating in the NERDTree Directory Tree Window:
 The \<F2\> function key can be used to toggle the NERDTree directory tree window open/closed. The NERDTree window can also be opened to a tree for the current file by entering ",T" while editing the file. Here are a few key sequences to help navigate in the directory tree window:
