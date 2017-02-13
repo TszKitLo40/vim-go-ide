@@ -11,19 +11,25 @@ This project is an IDE for the Go language based on amix's most excellent [Ultim
 
 # Requirements
 
-## Vim with Lua Support
+* Vim with Lua Support
 The neocomplete plugin [requires](https://github.com/Shougo/neocomplete) a version of Vim with Lua support. To see if your version includes Lua support, check for the "+lua" flag in the vim version information:
+
     vim --version | grep +lua
+
 For Ubuntu, the following versions of Vim include Lua support (choice depends on your graphical environment):
+
     * vim-nox    (no GUI support)
     * vim-gtk
     * vim-gnome
     * vim-athena
 
-## Exuberant Ctags
+* Exuberant Ctags
 The TagBar plugin [requires](https://github.com/majutsushi/tagbar#dependencies) the [Exuberant version of Ctags](http://ctags.sourceforge.net/). To check whether your current Ctags is the exuberant version:
+
     ctags --version | grep Exuberant
+
 To install Exuberant Ctags on Ubuntu:
+
      cd ~/Downloads
      wget https://sourceforge.net/projects/ctags/files/ctags/5.8/ctags-5.8.tar.gz
      tar -xzf ctags-5.8.tar.gz
@@ -34,13 +40,17 @@ To install Exuberant Ctags on Ubuntu:
 
 # Installation Instructions
 To install, run the following commands:
+
     git clone https://github.com/diverdane/vimrc.git ~/.vim_runtime
     ~/.vim_runtime/install.sh
+
 and then start up Vim and enter the following to ensure that your Go development environment includes the necessary binaries upon which Vim depends:
+
     :GoInstallBinaries
 
 # Function Key Mapping
 The following function key mappings were added for convenience. These mappings can be displayed in Vim by pressing <F7>:
+
     <F2>      Directory tree pane (open/close)
     <F3>      Line numbering (toggle)
     <F4>      Go definition for an function, struct, etc.
@@ -55,6 +65,7 @@ The following function key mappings were added for convenience. These mappings c
 
 # Go-Specific Key Mappings
 The following Go-specific key mappings were added. All but the last are only effective when editing a Go file. These mappings can be displayed by pressing <F10>:
+
     Sequence  Function       Description
     ========  ========       ===========
        K       doc           Show documentation for item under the cursor
@@ -79,6 +90,7 @@ The following Go-specific key mappings were added. All but the last are only eff
 
 # Go-Specific Snippets
 The following Go-specific snippets are included. These snippets are only effective while editing Go files, and can be displayed by pressing the <F9> key. To use a snippet, while in insert mode, type the sequence shown below followed by <Tab>, and a temlate block of code will be inserted:
+
          Sequence
     (Follow with <Tab>)       Snippet Inserted
     ===================   ========================
@@ -149,6 +161,7 @@ Don't like the colorscheme that's included? You can browse through over 100 colo
 
 # Navigating in the NERDTree Directory Tree Window:
 The <F2> function key can be used to toggle the NERDTree directory tree window open/closed. The NERDTree window can also be opened to a tree for the current file by entering ",T" while editing the file. Here are a few key sequences to help navigate in the directory tree window:
+
          <F2>         Turn directory tree window on/off
         <Enter>       Open current selection
            u          Move up to parent directory
@@ -161,14 +174,17 @@ The <F2> function key can be used to toggle the NERDTree directory tree window o
 
 # Navigating in the Tagbar
 The <F8> function key can be used to toggle the Tagbar window open/closed. To view documentation for Tagbar, enter the following while in Vim:
+
     :help TagBar
 
 # The vim-go Plugin
 Documentation for the vim-go plugin can be viewed by entering the following from within Vim:
+
     :help vim-go
 
 # Information on Other Plugins Included with vimrcPlugin
 Documentation for the vimrc project can be viewed by entering the following from within Vim:
+
     :help vimrc
 
 # How to Modify Mappings, Colors, Behavior, etc.
