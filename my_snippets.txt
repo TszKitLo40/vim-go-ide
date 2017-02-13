@@ -1,0 +1,64 @@
+     Sequence
+(Follow with <Tab>)       Snippet Inserted
+===================   ========================
+        :             v := value           
+        anon          fn := func() { ... } 
+        ap            append(slice, value) 
+        ap=           a = append(a, value) 
+        br            break                
+        ch            chan Type            
+        case          case ...:            
+        con           const XXX Type = ... 
+        cons          const ( ... )        
+        iota          const ( ... = iota ) 
+        cn            continue             
+        default       default: ...         
+        df            defer someFunction() 
+        def           defer func() { ... } 
+        defr          defer with recover
+        gpl           GNU Public License
+        import        import ( ... )       
+        interface     interface I { ... }  
+        if            if ... { ... }       
+        else          else { ... }
+        errn          Error return  !b     
+        errn,         Error return with two return values !b  
+        errp          Error panic !b       
+        errt          Error test fatal  !b 
+        errh          Error handle and return !b  
+        json          \`json:key\`         
+        yaml          \`yaml:key\`         
+        ft            fallthrough          
+        for           for ... { ... }      
+        fori          for 0..N-1 { ... }   
+        forr          for k, v := range items { ... }  
+        func          func Function(...) [error] { ... }  
+        ff            fmt.Printf(...)      
+        fn            fmt.Println(...)     
+        lf            log.Printf(...)      
+        ln            log.Println(...)     
+        make          make(Type, size)     
+        map           map[Type]Type        
+        main          func main() { ... }  
+        meth          func (self Type) Method(...) [error] { ... }  
+        ok            if !ok { ... }       
+        package       package ...          
+        pn            panic()              
+        rt            return               
+        select        select { case a := <-chan: ... }  
+        st            type T struct { ... }  
+        switch        switch x { ... }     
+        sp            fmt.Sprintf(...)     
+        go            go someFunc(...)     
+        gof           go func() { ... }()  
+        test          func TestXYZ(t *testing.T) { ... }  
+        hf            http.HandlerFunc !b
+        hhf           mux.HandleFunc !b
+        tsrv          httptest.NewServer   
+        ter           if err != nil { t.Errorf(...) }  
+        terf          if err != nil { t.Fatalf(...) }  
+        example       func ExampleXYZ() { ... }
+        benchmark     func BenchmarkXYZ(b *testing.B) { ... }
+        var           var x Type [= ...]   
+        vars          var ( ... )          
+        eq            equals: test two identifiers with DeepEqual  

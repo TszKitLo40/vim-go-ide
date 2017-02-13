@@ -1,4 +1,5 @@
 cd ~/.vim_runtime
+set nocp
 
 echo 'set runtimepath+=~/.vim_runtime
 

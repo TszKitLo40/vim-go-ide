@@ -102,6 +102,11 @@ set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Allow mouse to select between windows
+if has('mouse')
+  set mouse=a
+endif
+
 " Ignore case when searching
 set ignorecase
 
