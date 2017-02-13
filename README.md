@@ -23,6 +23,8 @@ For Ubuntu, the following versions of Vim include Lua support (choice depends on
     * vim-gnome
     * vim-athena
 
+For CentOS7, this [script](https://github.com/diverdane/vim-compile-centos7) can be used to compile a version of Vim with Lua support.
+
 ## Exuberant Ctags
 The TagBar plugin [requires](https://github.com/majutsushi/tagbar#dependencies) the [Exuberant version of Ctags](http://ctags.sourceforge.net/). To check whether your current Ctags is the exuberant version:
 
@@ -41,12 +43,17 @@ To install Exuberant Ctags on Ubuntu:
 # Installation Instructions
 To install, run the following commands:
 
-    git clone https://github.com/diverdane/vimrc.git ~/.vim_runtime
+    git clone https://github.com/diverdane/vim-go-ide.git ~/.vim_runtime
     ~/.vim_runtime/install.sh
 
 This will clone the repository, and set up ~/.vimrc to use the new ~/.vim_runtime directory (a backup copy of ~/.vimrc will be created). Next, start up Vim and enter the following to ensure that your Go development environment includes the necessary binaries upon which Vim depends:
 
     :GoInstallBinaries
+
+Optionally, create an alias (e.g. in ~/.bashrc or .bash_aliases) for vi:
+
+    alias vi=vim
+    export EDITOR=vim
 
 # Function Key Mapping
 The following function key mappings were added for convenience. These mappings can be displayed in Vim by pressing \<F7\>:
