@@ -163,6 +163,10 @@ The following Go-specific snippets are included. These snippets are only in effe
             vars          var ( ... )
             eq            equals: test two identifiers with DeepEqual
 
+# Neocomplete Plugin
+The [Neocomplete plugin](https://github.com/Shougo/neocomplete.vim) provides a keyword completion framework that works well with Go source code. Here is an sample screen shot showing auto completion for a Go file:
+![Neocomplete Screen Shot](neocomplete_screen.png "Neocomplete Auto Completion for Go")
+
 # Navigating in the NERDTree Directory Tree Window:
 The \<F2\> function key can be used to toggle the NERDTree directory tree window open/closed. The NERDTree window can also be opened to a tree for the current file by entering ",T" while editing the file. Here are a few key sequences to help navigate in the directory tree window:
 
