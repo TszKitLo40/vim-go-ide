@@ -11,7 +11,7 @@ This project is an IDE for the Go language based on amix's most excellent [Ultim
 
 # Requirements
 
-* Vim with Lua Support
+## Vim with Lua Support
 The neocomplete plugin [requires](https://github.com/Shougo/neocomplete) a version of Vim with Lua support. To see if your version includes Lua support, check for the "+lua" flag in the vim version information:
 
     vim --version | grep +lua
@@ -23,7 +23,7 @@ For Ubuntu, the following versions of Vim include Lua support (choice depends on
     * vim-gnome
     * vim-athena
 
-* Exuberant Ctags
+## Exuberant Ctags
 The TagBar plugin [requires](https://github.com/majutsushi/tagbar#dependencies) the [Exuberant version of Ctags](http://ctags.sourceforge.net/). To check whether your current Ctags is the exuberant version:
 
     ctags --version | grep Exuberant
@@ -44,12 +44,12 @@ To install, run the following commands:
     git clone https://github.com/diverdane/vimrc.git ~/.vim_runtime
     ~/.vim_runtime/install.sh
 
-and then start up Vim and enter the following to ensure that your Go development environment includes the necessary binaries upon which Vim depends:
+This will clone the repository, and set up ~/.vimrc to use the new ~/.vim_runtime directory (a backup copy of ~/.vimrc will be created). Next, start up Vim and enter the following to ensure that your Go development environment includes the necessary binaries upon which Vim depends:
 
     :GoInstallBinaries
 
 # Function Key Mapping
-The following function key mappings were added for convenience. These mappings can be displayed in Vim by pressing <F7>:
+The following function key mappings were added for convenience. These mappings can be displayed in Vim by pressing \<F7\>:
 
     <F2>      Directory tree pane (open/close)
     <F3>      Line numbering (toggle)
@@ -64,7 +64,7 @@ The following function key mappings were added for convenience. These mappings c
     <F12>     Scroll through installed Vim color schemes
 
 # Go-Specific Key Mappings
-The following Go-specific key mappings were added. All but the last are only effective when editing a Go file. These mappings can be displayed by pressing <F10>:
+The following Go-specific key mappings were added. All but the last are only effective when editing a Go file. These mappings can be displayed by pressing \<F10\>:
 
     Sequence  Function       Description
     ========  ========       ===========
@@ -89,7 +89,7 @@ The following Go-specific key mappings were added. All but the last are only eff
       ,T       NERDTreeFind  Display the current file in a directory tree
 
 # Go-Specific Snippets
-The following Go-specific snippets are included. These snippets are only effective while editing Go files, and can be displayed by pressing the <F9> key. To use a snippet, while in insert mode, type the sequence shown below followed by <Tab>, and a temlate block of code will be inserted:
+The following Go-specific snippets are included. These snippets are only effective while editing Go files, and can be displayed by pressing the \<F9\> key. To use a snippet, while in insert mode, type the sequence shown below followed by <Tab>, and a temlate block of code will be inserted:
 
          Sequence
     (Follow with <Tab>)       Snippet Inserted
@@ -156,11 +156,8 @@ The following Go-specific snippets are included. These snippets are only effecti
             vars          var ( ... )
             eq            equals: test two identifiers with DeepEqual
 
-# Browsing Colorshemes
-Don't like the colorscheme that's included? You can browse through over 100 colorschemes by pressing <F12> and scrolling using the arrow keys. If you find one that you prefer, you can set it as your default colorscheme by modifying the "colorscheme" setting in ~/.vim_runtime/my_configs.vim.
-
 # Navigating in the NERDTree Directory Tree Window:
-The <F2> function key can be used to toggle the NERDTree directory tree window open/closed. The NERDTree window can also be opened to a tree for the current file by entering ",T" while editing the file. Here are a few key sequences to help navigate in the directory tree window:
+The \<F2\> function key can be used to toggle the NERDTree directory tree window open/closed. The NERDTree window can also be opened to a tree for the current file by entering ",T" while editing the file. Here are a few key sequences to help navigate in the directory tree window:
 
          <F2>         Turn directory tree window on/off
         <Enter>       Open current selection
@@ -173,19 +170,24 @@ The <F2> function key can be used to toggle the NERDTree directory tree window o
     :help NERDTree    View documentation for NERDTree
 
 # Navigating in the Tagbar
-The <F8> function key can be used to toggle the Tagbar window open/closed. To view documentation for Tagbar, enter the following while in Vim:
+The \<F8\> function key can be used to toggle the Tagbar window open/closed. To view documentation for Tagbar, enter the following while in Vim:
 
     :help TagBar
 
-# The vim-go Plugin
+# The vim-go Plugin and Tutorial
 Documentation for the vim-go plugin can be viewed by entering the following from within Vim:
 
     :help vim-go
+
+The vim-go [tutorial](https://github.com/fatih/vim-go-tutorial) can be found here: https://github.com/fatih/vim-go-tutorial
 
 # Information on Other Plugins Included with vimrcPlugin
 Documentation for the vimrc project can be viewed by entering the following from within Vim:
 
     :help vimrc
+
+# Browsing Colorshemes
+Don't like the colorscheme that's included? You can browse through over 100 colorschemes by pressing \<F12\> and scrolling using the arrow keys. If you find one that you prefer, you can set it as your default colorscheme by modifying the "colorscheme" setting in ~/.vim_runtime/my_configs.vim.
 
 # How to Modify Mappings, Colors, Behavior, etc.
 If you'd like to make changes to key mappings, colorschemes, or any behavior, you can modify or append to the **~/.vim_runtime/my_configs.vim** file. You can also install your own plugins by cloning the plugins to the **~/.vim_runtime/sources_non_forked directory (pathogen will automatically detect and install the new plugins.
