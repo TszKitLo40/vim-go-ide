@@ -89,7 +89,7 @@ The following Go-specific key mappings were added. All but the last are only eff
       ,T       NERDTreeFind  Display the current file in a directory tree
 
 # Go-Specific Snippets
-The following Go-specific snippets are included. These snippets are only effective while editing Go files, and can be displayed by pressing the \<F9\> key. To use a snippet, while in insert mode, type the sequence shown below followed by <Tab>, and a temlate block of code will be inserted:
+The following Go-specific snippets are included. These snippets are only in effect while editing Go files, and can be displayed by pressing the \<F9\> key. To use a snippet, while in insert mode type the sequence shown below followed by a \<Tab\>, and a snippet of code will be inserted:
 
          Sequence
     (Follow with <Tab>)       Snippet Inserted
