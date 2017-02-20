@@ -71,6 +71,30 @@ check_exuberant_ctags() {
     fi
 }
 
+read -r -d '' GOPATH_WARNING <<- EOM
+===============================================================================
+WARNING: The \$GOPATH environment variable is not set. Please set this
+         and also add \$GOPATH/bin to your \$PATH.
+===============================================================================
+EOM
+
+read -r -d '' PATH_WARNING <<- EOM
+===============================================================================
+WARNING: The \$PATH environment variable does not contain \$GOPATH/bin.
+         This will cause autocompletion in Go files not to work.
+         Please set add \$GOPATH/bin to your \$PATH, or set \$GOBIN.
+===============================================================================
+EOM
+
+# Check whether $GOPATH/bin is included in $PATH
+check_path_has_gopath_bin() {
+    if [[ -z $GOPATH ]]; then
+        echo "$GOPATH_WARNING"
+    elif [[ ! $(echo $PATH | grep $GOPATH/bin) ]] && [[ -z $GOBIN ]]; then
+        echo "$PATH_WARNING"
+    fi
+}
+
 # Back up .vimrc if present
 backup_dot_vimrc() {
     if [ -f ~/.vimrc ]; then
@@ -80,6 +104,7 @@ backup_dot_vimrc() {
 
 check_vim_lua
 check_exuberant_ctags
+check_path_has_gopath_bin
 backup_dot_vimrc
 cd ~/.vim_runtime
 sh install_awesome_vimrc.sh

@@ -55,9 +55,10 @@ To install, run the following commands:
     git clone https://github.com/diverdane/vim-go-ide.git ~/.vim_runtime
     ~/.vim_runtime/install.sh
 
-This will clone the repository, and set up ~/.vimrc to use the new ~/.vim_runtime directory (a backup copy of ~/.vimrc will be created). Next, start up Vim and enter the following to ensure that your Go development environment includes the necessary binaries upon which Vim depends:
+This will clone the repository, and set up ~/.vimrc to use the new ~/.vim_runtime directory (a backup copy of ~/.vimrc will be created). Next, start up Vim and enter the following to ensure that your Go development environment includes the necessary binaries (and updates) upon which Vim depends:
 
     :GoInstallBinaries
+    :GoUpdateBinaries
 
 Optionally, create an alias (e.g. in ~/.bashrc or .bash_aliases) for vi:
 
@@ -68,16 +69,17 @@ Optionally, create an alias (e.g. in ~/.bashrc or .bash_aliases) for vi:
 The following function key mappings were added for convenience. These mappings can be displayed in Vim by pressing \<F7\>:
 
     <F2>      Directory tree pane (open/close)
-    <F3>      Line numbering (toggle)
-    <F4>      Go definition for a function, struct, etc.
-    <F5>      Go callers for a function
-    <F6>      Go callstack(s) for a function
+    <F3>      Line numbering (on/off)
+    <F4>      Go to definition for a Go function, struct, etc.
+    <F5>      Show callers for a Go function
+   <S-F5>     Set scope (root directory) for Go callers search
+    <F6>      Show callstack(s) for a Go function
     <F7>      Show this function key mapping info
     <F8>      Tag bar pane (open/close)
     <F9>      Show Go snippets
     <F10>     Show Go key mappings
     <F11>     Maximize/minimize window
-    <F12>     Scroll through installed Vim color schemes
+    <F12>     Scroll through installed Vim colorschemes
 
 # Go-Specific Key Mappings
 The following Go-specific key mappings were added. All but the last are only effective when editing a Go file. These mappings can be displayed by pressing \<F10\>:
@@ -172,10 +174,17 @@ The following Go-specific snippets are included. These snippets are only in effe
             vars          var ( ... )
             eq            equals: test two identifiers with DeepEqual
 
-# Navigating in the NERDTree Directory Tree Window:
-The \<F2\> function key can be used to toggle the NERDTree directory tree window open/closed. The NERDTree window can also be opened to a tree for the current file by entering ",T" while editing the file. Here are a few key sequences to help navigate in the directory tree window:
+# Setting the Scope (Root Directory) for Go Callers Search
+By default, the :GoCallers command (which can also be initiated via <F5>) searches for all callers to the current Go function only within the current package. For large, multiple-package projects, it's desirable to expand the search to look for callers outside of the current package. This can be accomplished dynamically either by using the :GoGuruScope command, or by navigating within the directory tree window (see next section) to the desired top directory (or bookmark), and
+selecting <S-F5> (shifted F5 function key).
+
+It should be noted that you don't want to set the search scope too arbitrarily large, since searches across larger scopes will take longer to complete.
+
+# Navigating in the Directory Tree Window:
+The \<F2\> function key can be used to toggle the directory tree window open/closed. The directory tree window can also be opened for the current file by entering ",T" while editing the file. Here are a few key sequences to help navigate in the directory tree window:
 
          <F2>         Turn directory tree window on/off
+        <S-F5>        Set scope (root directory) for Go callers search
         <Enter>       Open current selection
            u          Move up to parent directory
            C          Change directory into current selection
@@ -203,10 +212,10 @@ Documentation for the vimrc project can be viewed by entering the following from
     :help vimrc
 
 # Browsing Colorshemes
-Don't like the colorscheme that's included? You can browse through over 100 colorschemes by pressing \<F12\> and scrolling using the arrow keys. If you find one that you prefer, you can set it as your default colorscheme by modifying the "colorscheme" setting in ~/.vim_runtime/my_configs.vim.
+Don't like the colorscheme that's included? You can browse through over 100 colorschemes by pressing \<F12\> and scrolling using the arrow keys. If you find one that you prefer, you can set it as your default colorscheme by adding a 'colorscheme <your-choice>' entry in **~/.vim_runtime/my_configs.vim**.
 
 # How to Modify Mappings, Colors, Behavior, etc.
-If you'd like to make changes to key mappings, colorschemes, or any behavior, you can modify or append to the **~/.vim_runtime/my_configs.vim** file. You can also install your own plugins by cloning the plugins to the **~/.vim_runtime/sources_non_forked directory (pathogen will automatically detect and install the new plugins.
+If you'd like to make changes to key mappings, colorschemes, or any behavior, you can add settings to **~/.vim_runtime/my_configs.vim** file. You can also install your own plugins by cloning the plugins to the **~/.vim_runtime/sources_non_forked** directory (pathogen will automatically detect and install the new plugins.
 
 # How to uninstall
 Do the following:

@@ -73,16 +73,19 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "left"
-let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-let g:NERDTreeWinSize=35
-let NERDTreeChDirMode=2
-let NERDTreeShowBookmarks=1
+let g:NERDTreeWinPos      = "left"
+let NERDTreeShowHidden    = 0
+let NERDTreeIgnore        = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize     = 35
+let NERDTreeChDirMode     = 2
+let NERDTreeShowBookmarks = 1
+let NERDTreeMinimalUI     = 0
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
-
+map <leader>T  :NERDTreeFind<cr>
+" Open NERDTree on startup, when no file has been specified
+autocmd VimEnter * if !argc() | NERDTree | endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
