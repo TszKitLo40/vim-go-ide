@@ -174,17 +174,17 @@ The following Go-specific snippets are included. These snippets are only in effe
             vars          var ( ... )
             eq            equals: test two identifiers with DeepEqual
 
-# Setting the Scope (Top Directory) for Go Callers Search
-By default, the :GoCallers command (which can also be initiated via \<F5\>) searches for all callers to the current Go function only within the current package. For large, multiple-package projects, it's desirable to expand the search to look for callers outside of the current package. This can be accomplished dynamically either by using the :GoGuruScope command, or by navigating within the directory tree window (see next section) to the desired top directory (or bookmark), and
+# Setting the Scope for Go Callers Search
+By default, the :GoCallers command (which can also be initiated via \<F5\>) searches for all callers to the current Go function only within the current package. For large, multiple-package projects, it's desirable to expand the search to look for callers outside of the current package. This can be accomplished dynamically either by using the :GoGuruScope command, or by navigating within the directory tree window (see next section) to the desired top directory or bookmark, and
 selecting \<S-F5\> (shifted F5 function key).
 
-It should be noted that you don't want to set the search scope too arbitrarily large, since searches across larger scopes will take longer to complete.
+Note that you don't want to set the search scope too arbitrarily large, since searches across larger scopes will take longer to complete.
 
 # Navigating in the Directory Tree Window:
 The \<F2\> function key can be used to toggle the directory tree window open/closed. The directory tree window can also be opened for the current file by entering ",T" while editing the file. Here are a few key sequences to help navigate in the directory tree window:
 
          <F2>         Turn directory tree window on/off
-        <S-F5>        Set scope (root directory) for Go callers search
+        <S-F5>        Set scope (top directory) for Go callers search
         <Enter>       Open current selection
            u          Move up to parent directory
            C          Change directory into current selection
