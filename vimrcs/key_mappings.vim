@@ -15,14 +15,14 @@ map                  <F12>   :SCROLLCOLOR<CR>
 let g:FunctionKeyMapList = "
     \         Function Key Mappings \n
     \ =================================================== \n
-    \  <F2>      Directory tree pane (open/close) \n
+    \  <F2>      Directory tree window (open/close) \n
     \  <F3>      Line numbering (on/off) \n
     \  <F4>      Go to definition for a Go function, struct, etc. \n
     \  <F5>      Show callers for a Go function \n
-    \ <S-F5>     Set scope (root directory) for Go callers search\n
+    \ <S-F5>     Set scope (top directory) for Go callers search\n
     \  <F6>      Show callstack(s) for a Go function \n
     \  <F7>      Show this function key mapping info \n
-    \  <F8>      Tag bar pane (open/close) \n
+    \  <F8>      Tag bar window (open/close) \n
     \  <F9>      Show Go snippets \n
     \  <F10>     Show Go key mappings \n
     \  <F11>     Maximize/minimize window \n

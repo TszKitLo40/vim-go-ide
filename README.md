@@ -68,14 +68,14 @@ Optionally, create an alias (e.g. in ~/.bashrc or .bash_aliases) for vi:
 # Function Key Mapping
 The following function key mappings were added for convenience. These mappings can be displayed in Vim by pressing \<F7\>:
 
-    <F2>      Directory tree pane (open/close)
+    <F2>      Directory tree window (open/close)
     <F3>      Line numbering (on/off)
     <F4>      Go to definition for a Go function, struct, etc.
     <F5>      Show callers for a Go function
-   <S-F5>     Set scope (root directory) for Go callers search
+    <S-F5>    Set scope (top directory) for Go callers search
     <F6>      Show callstack(s) for a Go function
     <F7>      Show this function key mapping info
-    <F8>      Tag bar pane (open/close)
+    <F8>      Tag bar window (open/close)
     <F9>      Show Go snippets
     <F10>     Show Go key mappings
     <F11>     Maximize/minimize window
@@ -174,9 +174,9 @@ The following Go-specific snippets are included. These snippets are only in effe
             vars          var ( ... )
             eq            equals: test two identifiers with DeepEqual
 
-# Setting the Scope (Root Directory) for Go Callers Search
-By default, the :GoCallers command (which can also be initiated via <F5>) searches for all callers to the current Go function only within the current package. For large, multiple-package projects, it's desirable to expand the search to look for callers outside of the current package. This can be accomplished dynamically either by using the :GoGuruScope command, or by navigating within the directory tree window (see next section) to the desired top directory (or bookmark), and
-selecting <S-F5> (shifted F5 function key).
+# Setting the Scope (Top Directory) for Go Callers Search
+By default, the :GoCallers command (which can also be initiated via \<F5\>) searches for all callers to the current Go function only within the current package. For large, multiple-package projects, it's desirable to expand the search to look for callers outside of the current package. This can be accomplished dynamically either by using the :GoGuruScope command, or by navigating within the directory tree window (see next section) to the desired top directory (or bookmark), and
+selecting \<S-F5\> (shifted F5 function key).
 
 It should be noted that you don't want to set the search scope too arbitrarily large, since searches across larger scopes will take longer to complete.
 
@@ -212,7 +212,7 @@ Documentation for the vimrc project can be viewed by entering the following from
     :help vimrc
 
 # Browsing Colorshemes
-Don't like the colorscheme that's included? You can browse through over 100 colorschemes by pressing \<F12\> and scrolling using the arrow keys. If you find one that you prefer, you can set it as your default colorscheme by adding a 'colorscheme <your-choice>' entry in **~/.vim_runtime/my_configs.vim**.
+Don't like the colorscheme that's included? You can browse through over 100 colorschemes by pressing \<F12\> and scrolling using the arrow keys. If you find one that you prefer, you can set it as your default colorscheme by adding a 'colorscheme \<your-choice\>' entry in **~/.vim_runtime/my_configs.vim**.
 
 # How to Modify Mappings, Colors, Behavior, etc.
 If you'd like to make changes to key mappings, colorschemes, or any behavior, you can add settings to **~/.vim_runtime/my_configs.vim** file. You can also install your own plugins by cloning the plugins to the **~/.vim_runtime/sources_non_forked** directory (pathogen will automatically detect and install the new plugins.
